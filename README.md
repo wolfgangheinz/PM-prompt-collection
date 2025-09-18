@@ -11,7 +11,6 @@ This is my personal collection of helpful prompts for software product managers,
 | [Wireframe Generator Prompt](Discovery/wireframe.md) | Instructs an assistant to gather context and produce accessible, responsive wireframes. |
 | [Design Alternatives Generator](Discovery/design-alternatives.md) | Produce multiple CSS-only wireframe layouts with rationale for comparing design options. |
 | [Wireframe Example (Multi-Page)](Discovery/wireframe-example.html) | Sample one-file click dummy that demonstrates a multi-page wireframe flow. |
-| [Wireframe Example (DJ Music Finder)](Discovery/wireframe-example2.html) | Example responsive wireframe for a music discovery experience. |
 
 ### Documentation
 | Prompt | Purpose |
