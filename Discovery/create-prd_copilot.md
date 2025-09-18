@@ -1,53 +1,100 @@
 # Goal
 
-To guide an AI assistant in creating a detailed Product Requirements Document (PRD) in Markdown format, based on an initial user prompt. The PRD should be clear, actionable, and suitable for a junior developer to understand and implement the feature.
+To guide an AI assistant in generating a comprehensive Product Requirements Document (PRD) in Markdown format, based on an initial user prompt. The PRD should be precise, actionable, and aligned with enterprise SAFe (Scaled Agile Framework) practices, enabling cross-functional teams—including product managers, developers, testers, and business analysts—to effectively understand and implement the feature.
 
 # Process
 
-1.  **Receive Initial Prompt:** If you understood the assignment, please just reply with "Please tell me about the feature". The user provides a brief description or request for a new feature or functionality.
-2.  **Ask Clarifying Questions:** Before writing the PRD, the AI *must* ask clarifying questions to gather sufficient detail. The goal is to understand the "what" and "why" of the feature, not necessarily the "how" (which the developer will figure out). Make sure to provide options in letter/number lists so I can respond easily with my selections.
-3.  **Generate PRD:** Based on the initial prompt and the user's answers to the clarifying questions, generate a PRD using the structure outlined below in markdown format.
+1.  **Receive Initial Prompt:** Upon understanding the assignment, respond with "Please provide a detailed description of the feature." The user will supply a high-level request or description of a new feature or enhancement.
 
-# Clarifying Questions (Examples)
+2.  **Conduct Structured Clarifying Questions:** Prior to drafting the PRD, the AI *must* ask targeted, structured clarifying questions to gather comprehensive details. These questions should be designed to capture the feature’s business context and a clear problem description. 
 
-The AI should adapt its questions based on the prompt, but here are some common areas to explore:
+3.  **Generate PRD:** Utilizing the initial prompt and the user’s responses, produce a PRD following the structured format below. The document should support collaboration across SAFe teams and integration with corporate toolchains such as Confluence, Azure DevOps, or Jira.
 
-*   **Problem/Goal:** "What problem does this feature solve for the user?" or "What is the main goal we want to achieve with this feature?"
-*   **Target User:** "Who is the primary user of this feature?"
-*   **Core Functionality:** "Can you describe the key actions a user should be able to perform with this feature?"
-*   **Jobs to be done** "What is the main goal or job the user is trying to accomplish with this feature, and what actions do they need to complete to achieve that job?"
-*   **User Stories:** "Could you provide a few user stories? (e.g., As a [type of user], I want to [perform an action] so that [benefit].)"
-*   **Acceptance Criteria:** "How will we know when this feature is successfully implemented? What are the key success criteria?"
-*   **Scope/Boundaries:** "Are there any specific things this feature *should not* do (non-goals)?"
-*   **Data Requirements:** "What kind of data does this feature need to display or manipulate?"
-*   **Design/UI:** "Are there any existing design mockups or UI guidelines to follow?" or "Can you describe the desired look and feel?"
-*   **Edge Cases:** "Are there any potential edge cases or error conditions we should consider?"
+# Structured Clarifying Questions (Examples)
+
+The AI should tailor questions based on the feature context, focusing on enterprise priorities. Based on the provided input ask up to 10 questions. Create your own questinos or select from the examples below:
+
+*   **Business Context:**
+    - How does this feature contribute to the current Program Increment (PI) objectives?  
+    - Are there specific compliance or regulatory standards this feature must adhere to?
+
+*   **Problem Statement & Goals:**  
+    - What business problem or opportunity does this feature address?  
+    - What problems do users face, that should be addressed by this feature?
+
+*   **Target Users & Stakeholders:**  
+    - Who are the primary and secondary users?  
+    - Which internal or external stakeholders should be considered?
+
+*   **Core Functionality & User Journeys:**  
+    - What key actions must users be able to perform?  
+    - Can you provide detailed user stories or acceptance criteria?
+
+*   **Scope & Boundaries:**  
+    - What is explicitly within scope?  
+    - What functionality or scenarios are out of scope?
+
+*   **Data & Security Requirements:**  
+    - What data inputs, outputs, or integrations are required?  
+    - Are there any data privacy, security, or compliance constraints?
+
+*   **Design & UX Considerations:**  
+    - Are there existing design standards, mockups, or UI guidelines?  
+    - Should accessibility standards be observed?
+
+*   **Technical Constraints & Dependencies:**  
+    - Are there dependencies on existing systems, services, or toolchains?  
+    - Are there performance or scalability requirements?
+
+*   **Edge Cases & Risk Mitigation:**  
+    - What potential edge cases or failure modes should be addressed?  
+    - Are there contingency or rollback plans?
 
 # PRD Structure
 
-The generated PRD should include the following sections:
+The generated PRD should include the following sections, formatted in Markdown to facilitate easy integration with corporate documentation and ALM tools:
 
-1.  **Introduction/Overview:** Briefly describe the feature and the problem it solves. State the goal.
-2.  **Goals:** List the specific, measurable objectives for this feature.
-3.  **User Stories:** Detail the user narratives describing feature usage and benefits.
-4.  **Functional Requirements:** List the specific functionalities the feature must have. Use clear, concise language (e.g., "The system must allow users to upload a profile picture."). Number these requirements.
-5.  **Non-Goals (Out of Scope):** Clearly state what this feature will *not* include to manage scope.
-6.  **Design Considerations (Optional):** Link to mockups, describe UI/UX requirements, or mention relevant components/styles if applicable.
-7.  **Technical Considerations (Optional):** Mention any known technical constraints, dependencies, or suggestions (e.g., "Should integrate with the existing Auth module").
-8.  **Success Metrics:** How will the success of this feature be measured? (e.g., "Increase user engagement by 10%", "Reduce support tickets related to X").
-9.  **Open Questions:** List any remaining questions or areas needing further clarification.
+1.  **Introduction / Overview:**  
+    Provide a concise description of the feature, including business context, alignment with epic, and the primary problem or opportunity it addresses.
+
+2.  **Goals:**  
+    List specific, measurable, and time-bound objectives that define success for this feature.
+
+3.  **User Stories:**  
+    Detail user narratives that describe how the feature will be used and the value delivered to stakeholders.
+
+4.  **Functional Requirements:**  
+    Enumerate clear, unambiguous requirements describing the system’s expected behavior and capabilities. Number each requirement for traceability.
+
+5.  **Non-Goals (Out of Scope):**  
+    Explicitly state what is excluded from this feature to manage stakeholder expectations and scope creep.
+
+6.  **Design Considerations (Optional):**  
+    Reference design mockups, UX guidelines, accessibility standards, or other relevant design documentation.
+
+7.  **Technical Considerations (Optional):**  
+    Document known technical constraints, dependencies, integration points, and suggested implementation approaches.
+
+8.  **Compliance and Security Requirements (Optional):**  
+    Outline any regulatory, data privacy, or security requirements applicable to this feature.
+
+9.  **Success Metrics:**  
+    Define how the feature’s success will be measured, including relevant KPIs or business outcomes.
+
+10. **Open Questions:**  
+    List any unresolved issues or areas requiring further stakeholder input or investigation.
 
 # Target Audience
 
-Assume the primary reader of the PRD is a **junior developer**. Therefore, requirements should be explicit, unambiguous, and avoid jargon where possible. Provide enough detail for them to understand the feature's purpose and core logic.
+This PRD is intended primarily for cross-functional SAFe teams, including product owners, scrum teams, business analysts, and quality assurance personnel. Therefore, requirements should be explicit, unambiguous, and free of jargon where possible. Provide sufficient detail to ensure a shared understanding across roles and support compliance and audit readiness.
 
 # Output
 
-*   **Format:** Markdown (`.md`)
-*   **Filename:** `prd-[feature-name].md`
+*   **Format:** Markdown (`.md`)  
+*   **Filename:** `prd-[feature-name].md`  
 
-# Final instructions
+# Final Instructions
 
-1. Do NOT start implementing the PRD
-2. Make sure to ask the user clarifying questions
-3. Take the user's answers to the clarifying questions and improve the PRD
+1. Do NOT initiate implementation of the PRD.  
+2. Prioritize asking structured clarifying questions to gather all necessary information.  
+3. Use the user’s responses to iteratively refine and enhance the PRD.
