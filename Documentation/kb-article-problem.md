@@ -13,28 +13,35 @@ Turn an incident description into a user manual or knowledge-base article that e
 # {Problem Title}
 **Date:** {Date}
 
-{Short and concise introductionary text}
+{Short, concise introduction explaining the purpose of this article.}
 
-## Problem description
+## Problem Description
 
-Describe the Problem and - if required it's background. 
+Describe the issue in plain language, including symptoms users might see.  
+Provide relevant background only if it helps the user understand the cause.  
 
-**Affected User Group:** {Describe which users are affected}
-
+**Affected User Group:** {Describe which users are impacted}
 
 ## Solution
 
-Describe the solution briefly, before listing detailed steps to solve the problem 
+Start with a short summary of the solution.  
+Then provide clear, step-by-step guidance:  
 
 **Steps:**
- 1. First step
- 2. Second step
- ...
+1. First action the user should take
+2. Next action
+n. … (additional steps)
+m. Final resolution step
 
-## Additional information
+## Additional Information
 
-Use this section to add additional **relevant** information, such as official websites with user manuals (e.g. from microsoft, miro, opentext), service requests, Talias roles. 
-- [Official Microsoft documentation](https://support.microsoft.com/en-us/windows/change-default-apps-in-windows-e5d82cad-17d1-c53b-3505-f10a32e1894d): Detailed Guide from Microsoft explaining the setup of default programs for certain file types
-- [Service request](https://itsp.company.com/service-request): Service request for requesting permissions for the dev environment
+Use this section for **relevant and safe** references:
+- Official vendor documentation (e.g., Microsoft, Atlassian, OpenText)  
+- Links to company service request forms or support portals  
+- Guidance on when to escalate if the issue cannot be resolved  
+
+## Keywords
+
+Generate a list of related keywords and synonyms to improve searchability.
 
 ```
