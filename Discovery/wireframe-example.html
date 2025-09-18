@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>One-File Click-Dummy (Multi-Page Wireframe)</title>
+<style>
+  :root{--bg:#f6f7f8;--card:#fff;--line:#d9dfe5;--ink:#222;--ink2:#555;--primary:#1f6feb;--secondary:#9aa6b2}
+  *{box-sizing:border-box} body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+  header,footer{background:var(--card);border-block:1px solid var(--line)} header{position:sticky;top:0;z-index:5}
+  .bar{display:flex;gap:.5rem;align-items:center;padding:.75rem 1rem}
+  .grow{flex:1} .btn{border:1px dashed #b8c0c8;background:#eef2f6;color:var(--ink2);padding:.45rem .7rem;border-radius:.6rem}
+  .btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+  nav a{padding:.4rem .6rem;border-radius:.5rem;text-decoration:none;color:var(--ink2)}
+  nav a[aria-current="page"]{background:#e9efff;color:#0b3aa3}
+  main{max-width:1000px;margin:0 auto;padding:1rem;display:grid;gap:1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem}
+  /* pages */
+  section[data-page]{display:none}
+  section[data-page].active{display:block}
+  /* simple responsive grid */
+  .grid{display:grid;gap:1rem}
+  @media (min-width: 780px){ .grid.cols-2{grid-template-columns:1fr 1fr} }
+  /* wireframe look */
+  .box{border:1px dashed #b8c0c8;background:#f2f4f7;border-radius:10px;padding:1rem;color:#5d6a75}
+  .list .row{display:grid;grid-template-columns:40px 1fr auto;gap:.6rem;align-items:center;margin:.4rem 0;padding:.5rem;border:1px dashed #c6ced6;border-radius:8px;background:#f7f9fb}
+  .thumb{width:40px;height:40px;border-radius:6px;background:#e3e9ef;border:1px dashed #c6ced6}
+  .sr-only{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar" role="navigation" aria-label="Primary">
+    <strong>🎵 Media Wireframe</strong>
+    <nav class="grow">
+      <a href="#home" id="nav-home">Home</a>
+      <a href="#library" id="nav-library">Library</a>
+      <a href="#player" id="nav-player">Now Playing</a>
+      <a href="#settings" id="nav-settings">Settings</a>
+    </nav>
+    <button class="btn">Help</button>
+  </div>
+</header>
+
+<main id="app" tabindex="-1">
+  <!-- HOME -->
+  <section data-page="home" aria-labelledby="h-home">
+    <h1 id="h-home">Home</h1>
+    <div class="grid cols-2">
+      <div class="card">
+        <h2>Quick Actions</h2>
+        <div class="box">▶️ Resume last track</div>
+        <div class="box">💿 Recently added</div>
+        <div class="box">⭐ Favorites</div>
+      </div>
+      <div class="card">
+        <h2>Search</h2>
+        <div class="box" role="search">🔎 Search input + filters</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIBRARY -->
+  <section data-page="library" aria-labelledby="h-lib">
+    <h1 id="h-lib">Library</h1>
+    <div class="card list" role="list" aria-label="Tracks">
+      <div class="row" role="listitem">
+        <div class="thumb" aria-hidden="true"></div>
+        <div>
+          <div>Track Title</div>
+          <div style="font-size:12px;color:#6b7785">Artist — Album</div>
+        </div>
+        <a class="btn primary" href="#player">Play</a>
+      </div>
+      <div class="row" role="listitem">
+        <div class="thumb" aria-hidden="true"></div>
+        <div>
+          <div>Another Song</div>
+          <div style="font-size:12px;color:#6b7785">Artist — Album</div>
+        </div>
+        <a class="btn" href="#player">Queue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYER -->
+  <section data-page="player" aria-labelledby="h-player">
+    <h1 id="h-player">Now Playing</h1>
+    <div class="card grid cols-2">
+      <div class="box" style="aspect-ratio:1/1;display:grid;place-items:center">ALBUM ART</div>
+      <div class="">
+        <div class="box">Track Title<br><small>Artist — Album</small></div>
+        <div class="box" aria-label="Progress">━━━●━━━━━━━━ 1:23 / 3:45</div>
+        <div class="box">⏮ ⏯ ⏭ 🔀 🔁 🔊</div>
+        <div><a class="btn" href="#home">Back to Home</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section data-page="settings" aria-labelledby="h-settings">
+    <h1 id="h-settings">Settings</h1>
+    <div class="card">
+      <div class="box">Appearance: Light / Dark (toggle)</div>
+      <div class="box">Audio device / Output</div>
+      <div class="box">Accessibility options</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="bar" role="contentinfo">
+    <span>© Wireframe Demo</span>
+    <span class="grow"></span>
+    <a class="btn" href="#home">Home</a>
+    <a class="btn" href="#player">Mini Player</a>
+  </div>
+</footer>
+
+<script>
+  // Simple hash router for “pages”
+  const pages = document.querySelectorAll('section[data-page]');
+  const navLinks = {
+    home:    document.getElementById('nav-home'),
+    library: document.getElementById('nav-library'),
+    player:  document.getElementById('nav-player'),
+    settings:document.getElementById('nav-settings')
+  };
+  function setActive(page){
+    pages.forEach(s => s.classList.toggle('active', s.dataset.page===page));
+    // aria-current on nav
+    Object.entries(navLinks).forEach(([k,a])=>{
+      if(!a) return;
+      if(k===page){ a.setAttribute('aria-current','page'); }
+      else{ a.removeAttribute('aria-current'); }
+    });
+    // focus main for screen readers / keyboard users
+    document.getElementById('app').focus();
+  }
+  function route(){
+    const page = (location.hash.replace('#','') || 'home');
+    setActive(page);
+  }
+  window.addEventListener('hashchange', route);
+  route(); // initial
+</script>
+</body>
+</html>
