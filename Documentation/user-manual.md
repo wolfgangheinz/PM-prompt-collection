@@ -1,52 +1,64 @@
-# Goal
-Create the release notes for the current release based on the information in ALM Octane, our SDLC tool. 
-Before you start, ask clarifying questions if needed. 
+# Prompt: User Manual Composer
 
-## Instructions for Copilot
+## Purpose
+Convert technical documentation or product requirements into a clear, task-focused user manual that empowers end users to complete their jobs without additional support.
 
-1. Analyze the attached Octane export file (CSV, Excel, or similar).
-2. Group items by type:
-       - Features (with their user stories)
-       - Defects
-3. For each Feature:
-       - Include the feature title and link.
-       - Write a brief functional description based on the feature description field.
-       - Add the Epic name, unless the epic is "Backlog" or "Operations".
-       - List all related User Stories:
-              - Include title, link, and a short functional description.
-4. For each Defect:
-       - Include the defect title, link, and a short description.
-5. Use the following template:
+## When to Use
+Use this prompt after defining a feature or workflow and you need end-user documentation, onboarding guides, or in-app help articles.
 
+## Inputs to Collect
+- Product or feature description, including target audience
+- Primary tasks and success scenarios the manual should cover
+- Known prerequisites, permissions, or environment requirements
+- Screens, UI labels, or command names referenced in the flow
+- Tone or branding guidelines (e.g., formal vs. conversational)
 
+## Conversation Flow
+1. Ask for the feature overview and target audience if not already provided.
+2. Probe for:
+   - Key tasks the user must complete
+   - Prerequisites or access requirements
+   - Variants (e.g., desktop vs. mobile steps)
+   - Common errors or troubleshooting tips to include
+3. Summarize the collected information and confirm with the user before drafting.
+4. Produce the manual using the template below, adapting sections to the provided context.
+5. Highlight any missing details as open questions and offer to revise once clarified.
+
+## Manual Template
 ```
-# Release Notes 
-**Release:** {Release Number}
-**Date:** {Release Date}
+# {Manual Title}
+**Audience:** {Persona / Role}
+**Last Updated:** {Date}
 
-## New functionality
+## Overview
+Purpose of the feature and primary benefits in 2–3 sentences.
 
-### 1. [Feature Title](Feature Link)
-    Brief functional description
-    **Epic:** {Epic Name}
-    1.1 [User Story Title](User Story Link)
-        Brief functional description
-    1.2 [User Story Title](User Story Link)
-        Brief functional description
+## Prerequisites
+- Requirement 1
+- Requirement 2
 
-### 2. [Feature Title](Feature Link)
-    Brief functional description
-    **Epic:** {Epic Name}
-    2.1 [User Story Title](User Story Link)
-        Brief functional description
-...
+## Step-by-Step Instructions
+1. Step description with referenced UI labels
+2. Next step …
 
-## Defects
+## Tips & Best Practices
+- Productivity tips, shortcuts, or warnings
 
-### 1. Defect Title
-    Brief description
-### 2. Defect Title
-    Brief description
-...
+## Troubleshooting
+| Issue | Likely Cause | Resolution |
+| --- | --- | --- |
 
+## Related Resources
+- Links to videos, FAQs, support contact
 ```
+
+## Output Checklist
+- Use active voice and numbered steps for procedures.
+- Reference UI labels exactly as they appear in the product.
+- Keep instructions device-specific when differences exist.
+- Include screenshots placeholders only if the user supplied them.
+
+## Guardrails
+- Do not fabricate product behavior—flag gaps instead.
+- Avoid internal jargon; use terms the end user would understand.
+- Redact confidential data before publishing.

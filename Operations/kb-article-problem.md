@@ -1,47 +1,65 @@
-# Goal
-Turn an incident description into a user manual or knowledge-base article that empowers end users to solve the problem without further support.
+# Prompt: Incident to Knowledge Base Article
 
-## Instructions for Copilot
+## Purpose
+Turn an incident description into a polished knowledge-base article or user manual so end users can resolve the problem without escalating to support.
 
-1. Analyze the attached incident report and identify missing information about the problem description or resolution
-2. Ask clarifying questions to the user to close the information gaps
-4. Create a full knowledge base article or user manual for the incident. Make sure no internal data or personal information is included. 
-5. Use the following template:
+## When to Use
+Use this prompt after an incident has been mitigated and the remediation steps are known, but a customer-facing article does not yet exist.
 
+## Inputs to Collect
+- Incident summary and timeline
+- Root cause and confirmed resolution steps
+- Impacted user segments, platforms, or configurations
+- Security or privacy constraints on what can be shared externally
+- Tone guidance (formal support article vs. conversational how-to)
 
+## Conversation Flow
+1. Confirm access to the incident report. Ask the user for missing context (symptoms, error codes, environment details).
+2. Identify gaps in the problem description or fix procedure and ask targeted follow-up questions.
+3. Summarize the incident understanding and the audience for the article; request confirmation before writing.
+4. Draft the article with the template below, tailoring wording to the intended readers.
+5. Provide an **Open Questions** section if any critical information is still unknown.
+
+## Article Template
 ```
 # {Problem Title}
-**Date:** {Date}
+**Published:** {Date}
+**Applies To:** {Products / Versions / User Segments}
 
-{Short, concise introduction explaining the purpose of this article.}
+## Overview
+Short explanation of the issue, symptoms, and business impact.
 
-## Problem Description
+## Symptoms
+- Symptom 1
+- Symptom 2
 
-Describe the issue in plain language, including symptoms users might see.  
-Provide relevant background only if it helps the user understand the cause.  
+## Root Cause
+Plain-language summary of why the issue occurs.
 
-**Affected User Group:** {Describe which users are impacted}
+## Resolution
+1. Step-by-step instructions the user should follow
+2. …
 
-## Solution
+## Verification
+How the user confirms the problem is resolved.
 
-Start with a short summary of the solution.  
-Then provide clear, step-by-step guidance:  
+## When to Escalate
+Conditions under which the user should contact support.
 
-**Steps:**
-1. First action the user should take
-2. Next action
-n. … (additional steps)
-m. Final resolution step
-
-## Additional Information
-
-Use this section for **relevant and safe** references:
-- Official vendor documentation (e.g., Microsoft, Atlassian, OpenText)  
-- Links to company service request forms or support portals  
-- Guidance on when to escalate if the issue cannot be resolved  
+## Additional Resources
+- Links to vendor docs or internal articles safe for sharing
 
 ## Keywords
-
-Generate a list of related keywords and synonyms to improve searchability.
-
+Term list to improve searchability.
 ```
+
+## Output Checklist
+- Use user-friendly language; avoid internal acronyms unless explained.
+- Highlight safety or data-loss warnings before relevant steps.
+- Include placeholders for screenshots only if provided by the user.
+- Note any environment-specific variations (Windows vs. Mac, etc.).
+
+## Guardrails
+- Do not reveal confidential data, personal information, or internal ticket numbers.
+- Flag any missing verification or escalation details instead of inventing them.
+- Encourage the user to review with support/comms if the article is externally facing.

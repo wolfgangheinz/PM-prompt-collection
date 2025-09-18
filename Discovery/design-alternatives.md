@@ -1,24 +1,38 @@
-# Generating Multiple Layout Alternatives
+# Prompt: Design Alternatives Generator
 
-## Description
-Create several distinct UI or page layout alternatives for a given set of content and requirements, helping the team explore design options and select the most suitable approach.
+## Purpose
+Help the team explore multiple layout directions by producing several lightweight wireframe alternatives that present the same content in distinct ways.
 
-## Detailed Prompt
+## When to Use
+Use this prompt when stakeholders want to compare structure, hierarchy, or interaction patterns before committing to a detailed design.
 
-**Input:**  
-- A user story or feature description that outlines the context and goals.  
-- A description of the content to be displayed (e.g., text blocks, images, forms, navigation elements).  
-- Any required constraints or preferences (e.g., responsive design, accessibility, branding guidelines, device types, user goals).
+## Inputs to Collect
+- User story or feature description with goals and target users
+- Required content elements (forms, tables, messaging, media)
+- Constraints (platform, accessibility, branding, performance)
+- Any inspiration, must-have patterns, or anti-patterns to avoid
 
-**Instructions:**  
-- Always ask for a user story or feature description as input before generating layout alternatives.  
-- You may ask clarifying questions to better understand the requirements before proceeding.  
-- Generate at least three distinct layout alternatives for presenting the content.  
-- For each alternative, produce a **wireframe** rather than just a description. 
-- Simple standalone HTML prototypes (static with css via cdn, no JavaScript, no clickdummy, no interactinos).  
-- For each alternative, briefly explain the rationale behind the design choices (e.g., why elements are grouped or ordered a certain way, how the layout addresses the requirements, trade-offs considered).
+## Conversation Flow
+1. Request the user story or feature brief if it has not been supplied.
+2. Ask clarifying questions about:
+   - Primary and secondary user journeys
+   - Content priority and relationships
+   - Device focus (desktop, mobile, kiosk, etc.)
+   - Any technical or regulatory restrictions
+3. Summarize the requirements, list the planned number of alternatives (minimum three), and obtain confirmation before building.
+4. Generate one standalone HTML file that contains each alternative as a separate section with navigation tabs or a CSS-only slideshow to move between them.
+5. Provide a concise rationale for each alternative, highlighting strengths, trade-offs, and best-fit scenarios.
 
-**Output:**  
-- One standalone html file with a an option to browse through the layout alternatives (slideshow, pure css)
-- Multiple clearly described layout alternatives with simple wireframes.  
-- A rationale for each alternative, highlighting strengths, weaknesses, and suitability for the scenario.
+## Output Requirements
+- Deliver the HTML in a single ` ```html ` code block.
+- Each alternative must include:
+  - Clear labels for primary regions (header, navigation, content, actions)
+  - Distinct layout choices (grid, stacked, split-view, etc.)
+  - Notes within the HTML (comments) to call out major design decisions.
+- Implement navigation between alternatives using only HTML/CSS.
+- Append a Markdown table that summarizes the alternatives and their recommended use cases.
+
+## Guardrails
+- Keep styling grayscale/low-fidelity; avoid polished UI visuals.
+- Maintain accessibility basics—landmarks, focus order, aria labels for interactive toggles.
+- If information remains ambiguous, list assumptions and ask if the user wants revisions.

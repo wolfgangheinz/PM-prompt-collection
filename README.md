@@ -2,9 +2,9 @@
 This is my personal collection of helpful prompts for software product managers, POs and BAs. Feel free to use them or to suggest improvements.
 
 ## How to use
-1. Open the file in gitub
-2. Click the **copy raw file button** and paste it into Copilot
-3. Follow the instructions
+1. Open the file in GitHub.
+2. Click the **Copy raw file** button and paste it into your assistant.
+3. Follow the instructions in the prompt and provide any requested inputs.
 
 ## Table of contents
 
@@ -26,7 +26,7 @@ This is my personal collection of helpful prompts for software product managers,
 ### Documentation
 | Prompt | Purpose |
 | --- | --- |
-| [Create user manual](Documentation/user-manual.md) | Create a user manual / product documentation from user stories, feature descriptions or other requiremens |
+| [User Manual Composer](Documentation/user-manual.md) | Turn feature context into task-focused documentation for end users. |
 | [Release Notes Builder](Documentation/release-notes.md) | Create structured release notes from ALM Octane exports grouped by feature and defect. |
 
 
@@ -38,4 +38,4 @@ This is my personal collection of helpful prompts for software product managers,
 ### Operations
 | Prompt | Purpose |
 | --- | --- |
-| [Knowledge base article from incident](Operations/kb-article-problem.md) | Create a knowledge base article from an incident description |
+| [Incident to Knowledge Base Article](Operations/kb-article-problem.md) | Convert incident reports into reusable, customer-safe KB content. |
