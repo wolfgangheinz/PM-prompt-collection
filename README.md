@@ -1,6 +1,11 @@
 # PM-prompt-collection
 This is my personal collection of helpful prompts for software product managers, POs and BAs. Feel free to use them or to suggest improvements.
 
+## How to use
+1. Open the file in gitub
+2. Click the **copy raw file button** and paste it into Copilot
+3. Follow the instructions
+
 ## Table of contents
 
 ### Discovery
@@ -16,6 +21,7 @@ This is my personal collection of helpful prompts for software product managers,
 | Prompt | Purpose |
 | --- | --- |
 | [Release Notes Builder](Documentation/release-notes.md) | Create structured release notes from ALM Octane exports grouped by feature and defect. |
+| [Knowledge base article from incident](Documentation/kb-article-problem.md) | Create a knowledge base article from an incident description |
 
 ### Meetings
 | Prompt | Purpose |
