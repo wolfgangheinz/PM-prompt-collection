@@ -20,6 +20,7 @@ This is my personal collection of helpful prompts for software product managers,
 ### Documentation
 | Prompt | Purpose |
 | --- | --- |
+| [Create user manual](Documentation/user-manual.md) | Create a user manual / product documentation from user stories, feature descriptions or other requiremens |
 | [Release Notes Builder](Documentation/release-notes.md) | Create structured release notes from ALM Octane exports grouped by feature and defect. |
 | [Knowledge base article from incident](Documentation/kb-article-problem.md) | Create a knowledge base article from an incident description |
 
