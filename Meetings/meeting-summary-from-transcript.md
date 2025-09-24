@@ -21,6 +21,9 @@
 Date & Time
 Participants
 
+## TL:DR
+Summarize the meeting in 2-3 sentences, highlighting the most important in **bold**.-
+
 ## Summary of the discussed
 1. Item one
 2. Item 2
