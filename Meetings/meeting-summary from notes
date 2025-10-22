@@ -11,6 +11,7 @@
     - Related Tickets in ALM Octane (if available)
     - Related pages in Confluence (if available)
 - Don't include any empty sections in case there is no content. E.g. don't include the "Decisions" sections in case no decisions have been taken or don't include "Additional information" in case there is nothing related.
+- Produce the summary in English, independent of the language of the notes. 
 
 ## Process
 1. Start by asking the user for the context. 
