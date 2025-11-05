@@ -1,7 +1,7 @@
 # Meeting Summary
 
 ## Task: 
-- Please summarize this meeting. Make sure there is a brief overview of the discussed. It doesn't need to be a protocol.
+- Please summarize this meeting. Make sure there is an accurate overview of the discussed. It doesn't need to be a protocol but it should reflect all important items well. For longer meetings there can be a larger number of discussed items. 
 - But make sure that everything **important** is hightlighted, such as **decisions**, **action items**, **priorities**, **roadblocks**.
 - In case it adds context or is important, add who suggested, asked or decided something or who had a strong opinion.
 - At the end, highlight if there are potential misunderstandings or misalignments and what might have caused them.
@@ -14,6 +14,7 @@
     - Related Tickets in ALM Octane (if available)
     - Related pages in Confluence (if available)
 - Don't include any empty sections in case there is no content. E.g. don't include the "Decisions" sections in case no decisions have been taken or don't include "Additional information" in case there is nothing related.
+- Create the summary in English, regardless of the spoken language or the language of provided notes. 
 
 ## Template
 ```
