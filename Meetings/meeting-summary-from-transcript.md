@@ -14,6 +14,7 @@
     - Related Tickets in ALM Octane (if available)
     - Related pages in Confluence (if available)
 - Don't include any empty sections in case there is no content. E.g. don't include the "Decisions" sections in case no decisions have been taken or don't include "Additional information" in case there is nothing related.
+- Create the meeting summary in english, regardless of the spoken language or the language of provided notes. 
 
 ## Template
 ```
