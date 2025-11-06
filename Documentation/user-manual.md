@@ -1,22 +1,13 @@
 # Goal
-Create the release notes for the current release based on the information in ALM Octane, our SDLC tool. 
-Before you start, ask clarifying questions if needed. 
+Convert this user story, feature description or concept into a user-facing manual after the implementation. 
 
 ## Instructions for Copilot
 
-1. Analyze the attached Octane export file (CSV, Excel, or similar).
-2. Group items by type:
-       - Features (with their user stories)
-       - Defects
-3. For each Feature:
-       - Include the feature title and link.
-       - Write a brief functional description based on the feature description field.
-       - Add the Epic name, unless the epic is "Backlog" or "Operations".
-       - List all related User Stories:
-              - Include title, link, and a short functional description.
-4. For each Defect:
-       - Include the defect title, link, and a short description.
-5. Use the following template:
+1. Analyze the attached specifications. In case the user didn't provide you with a specification, don't try to find one yourself but instruct the user to provide it.
+2. In case the specification contains multiple features/functionalities ask the user if you should produce one or more manuals. In case the feature consists of multiple functionalities and they should be within one manual make sure the manual is structured in a good way. 
+6. Use the following template:
+7. Use English Language, regardless of the language of the provided concepts.
+8. Make sure you don't 
 
 
 ```
