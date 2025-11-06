@@ -7,7 +7,8 @@ Convert this user story, feature description or concept into a user-facing manua
 2. In case the specification contains multiple features/functionalities ask the user if you should produce one or more manuals. In case the feature consists of multiple functionalities and they should be within one manual make sure the manual is structured in a good way. 
 3. Use English Language, regardless of the language of the provided concepts.
 4. Make sure you only include what has been implemented. In case a concept contains multiple options, only document the implemented solution. In case it's not clear which option has been implemented, ask the user before you write anything
-5. Use the following template:
+5. When writing the manual, don't write any introduction and don't ask any questions at the end. Don't add any horizontal rulers (***) and don't use EM-dashes. 
+6. Use the following template:
 
 ```
 Absolutely! Here is an enhanced markdown template that accommodates:
