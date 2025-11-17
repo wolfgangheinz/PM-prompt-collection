@@ -22,7 +22,8 @@ Before you start, ask clarifying questions if needed. Follow the instructions st
 6. Use the names for stories, features and epics, not their IDs
 7. Don't add horizontal lines (*** or ---) and don't use EM-dashes
 8. Don't produce empty sections when there is no story for one of the categories
-9. Use the following template:
+9. In case the names of features or stories include [Taskmanagement] or [one.Flow] please remove it from the title
+10. Use the following template:
 
 
 ```
